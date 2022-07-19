@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 const section = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isBookmark, setIsBookmark] = useState(false);
   useEffect(() => {
     if (localStorage.getItem("token") != undefined) {
-      setIsLoggedIn(true);
+      setIsBookmark(true);
     }
   }, []);
   return (
@@ -19,7 +19,7 @@ const section = () => {
           backgroundColor: "lightcyan",
         }}
       >
-        {isLoggedIn && <Link to="/">Home</Link>}
+        {isBookmark && <Link to="/">Home</Link>}
         {/* {!isLoggedIn && <Link to="/login">Login</Link>}
         {!isLoggedIn && <Link to="/register">Register</Link>}
         {isLoggedIn && <Link to="/addBook">Add Book</Link>}
