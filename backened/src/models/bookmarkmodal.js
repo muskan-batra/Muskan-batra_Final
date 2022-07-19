@@ -6,7 +6,7 @@ const bookSchema = mongoose.Schema({
   book_cover: { type: String, required: true },
   author_name: { type: String, required: true },
   total_books: { type: Number, required: true },
-});
+})
 
 const bookModel = mongoose.model("books", bookSchema);
 module.exports = bookModel;
